@@ -20,7 +20,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Hello Webpack bundled JavaScript Project',
-      template: 'src/index.html'
+      template: './src/index.html'
     })
   ],
   output: {
