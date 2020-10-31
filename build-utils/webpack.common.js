@@ -1,6 +1,6 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -9,26 +9,25 @@ module.exports = {
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
-        use: ['babel-loader']
-      }
-    ]
+        use: ['babel-loader'],
+      },
+    ],
   },
   resolve: {
-    extensions: ['*', '.js']
+    extensions: ['*', '.js'],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Hello Webpack bundled JavaScript Project',
-      template: './src/index.html'
-    })
+      template: './src/index.html',
+    }),
   ],
   output: {
     path: path.resolve(__dirname, '../', 'dist'),
-    publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
   },
 };
