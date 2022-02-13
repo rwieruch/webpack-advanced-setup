@@ -28,6 +28,6 @@ module.exports = {
     filename: 'bundle.js',
   },
   devServer: {
-    contentBase: path.resolve(__dirname, '..', './dist'),
+    static: path.resolve(__dirname, '..', './dist'),
   },
 };
